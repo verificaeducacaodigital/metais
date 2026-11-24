@@ -1,0 +1,718 @@
+
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+:root {
+    --blue: #087dbb;
+    --blue-light: #59caff;
+    --blue-dark: #064568;
+    --silver: #dcebf4;
+    --background: #071522;
+    --background-light: #102b40;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--white);
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* =====================================
+   MENU
+===================================== */
+
+header {
+    background: linear-gradient(120deg, #06111d, #123d5c, #06111d);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--blue);
+    box-shadow: 0 4px 20px #168acb30;
+}
+
+.navbar {
+    min-height: 85px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--blue-light);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--silver);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue-light);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+}
+
+/* =====================================
+   CAPA INICIAL
+===================================== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(90deg, #061522 10%, #09283dcc),
+        url("https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1600&q=85")
+        center / cover;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.tag,
+.section-tag {
+    color: var(--blue-light);
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 70px);
+    line-height: 1.1;
+    margin: 25px 0;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: var(--blue-light);
+    text-shadow: 0 0 20px #168acb88;
+}
+
+.hero-content p {
+    font-size: 23px;
+    color: #e1edf5;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+.btn,
+button {
+    display: inline-block;
+    padding: 14px 27px;
+    border-radius: 9px;
+    border: 1px solid #75d5ff;
+
+    background: linear-gradient(
+        135deg,
+        #42bfff,
+        #0872ad,
+        #064a79
+    );
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+
+    box-shadow: 0 5px 18px #168acb40;
+    transition: .3s;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #168acb99;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: .8;
+}
+
+.secondary-btn {
+    background: linear-gradient(135deg, #536b7d, #243b4d);
+    border-color: #9eb9ca;
+}
+
+/* =====================================
+   SEÇÕES
+===================================== */
+
+.section {
+    padding: 100px 9%;
+    text-align: center;
+}
+
+.section-dark {
+    background: linear-gradient(
+        135deg,
+        #071522,
+        #102c43,
+        #071522
+    );
+}
+
+.section h2 {
+    font-size: 38px;
+    color: var(--blue-light);
+    margin: 20px 0 30px;
+}
+
+.intro {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    color: #e0eaf1;
+    font-size: 21px;
+}
+
+/* =====================================
+   CARDS
+===================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.card {
+    background: linear-gradient(145deg, #173e59, #0c2335);
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid #347fa8;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue-light);
+    box-shadow: 0 12px 35px #168acb35;
+}
+
+.card h3 {
+    color: var(--blue-light);
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.card p {
+    color: #e0eaf1;
+    font-size: 19px;
+}
+
+.card-icon {
+    font-size: 45px;
+}
+
+/* =====================================
+   IMAGEM DA CROMAGEM
+===================================== */
+
+.chrome-image {
+    max-width: 850px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 2px solid var(--blue-light);
+    box-shadow: 0 0 30px #168acb35;
+}
+
+.chrome-image img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* =====================================
+   ETAPAS
+===================================== */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.step {
+    padding: 30px;
+    background: linear-gradient(145deg, #174563, #0c2438);
+    border-radius: 15px;
+    border-bottom: 4px solid var(--blue-light);
+    transition: .3s;
+}
+
+.step:hover {
+    transform: translateY(-7px);
+}
+
+.step span {
+    font-size: 42px;
+    color: var(--blue-light);
+    font-weight: bold;
+}
+
+.step h3 {
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.step p {
+    font-size: 18px;
+    color: #d5e7f1;
+}
+
+.subtitle {
+    color: var(--blue-light);
+    font-size: 29px;
+    margin: 60px 0 25px;
+}
+
+/* =====================================
+   FÓRMULA QUÍMICA
+===================================== */
+
+.formula {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #123d5c, #0b2236);
+    border: 2px solid var(--blue-light);
+    border-radius: 18px;
+    box-shadow: 0 0 25px #168acb30;
+}
+
+.formula h3 {
+    font-size: 24px;
+}
+
+.formula p {
+    color: var(--blue-light);
+    font-size: 38px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/* =====================================
+   EXPERIMENTO DE ELETRÓLISE
+===================================== */
+
+.experiment {
+    max-width: 750px;
+    height: 330px;
+    margin: 40px auto;
+
+    background: #102c42;
+    border: 2px solid var(--blue-light);
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 15px;
+    overflow: hidden;
+}
+
+.electrode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.positive {
+    color: #ff8585;
+}
+
+.negative {
+    color: var(--blue-light);
+}
+
+.metal-bar {
+    width: 20px;
+    height: 140px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #899ba8, white, #718494);
+}
+
+.solution {
+    width: 60%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(#168acb55, #168acb20);
+    border: 2px solid #55caff;
+    border-radius: 5px 5px 20px 20px;
+}
+
+.object {
+    position: absolute;
+    bottom: 0;
+    left: 55%;
+    transform: translateX(-50%);
+
+    width: 75px;
+    height: 110px;
+
+    background: linear-gradient(90deg, #667b89, #aab8c1, #526a7b);
+    border-radius: 12px 12px 3px 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: background 2s, box-shadow 2s;
+}
+
+.object.plated {
+    background: linear-gradient(
+        90deg,
+        #4d7b98,
+        #ffffff,
+        #8bd8ff,
+        #ffffff,
+        #4d7b98
+    );
+
+    box-shadow: 0 0 35px #80d7ff;
+}
+
+.ion-container span {
+    position: absolute;
+    color: #a3e8ff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ion-container span:nth-child(1) {
+    top: 15px;
+    left: 15%;
+}
+
+.ion-container span:nth-child(2) {
+    top: 50px;
+    left: 65%;
+}
+
+.ion-container span:nth-child(3) {
+    top: 90px;
+    left: 30%;
+}
+
+.ion-container span:nth-child(4) {
+    top: 120px;
+    left: 80%;
+}
+
+.ion-container span:nth-child(5) {
+    top: 25px;
+    left: 85%;
+}
+
+.ion-container span:nth-child(6) {
+    top: 150px;
+    left: 45%;
+}
+
+.ion-container.active span {
+    animation: moveIon 1.5s infinite alternate;
+}
+
+@keyframes moveIon {
+    to {
+        transform: translate(-15px, 75px);
+        opacity: .2;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+#experimentMessage {
+    color: var(--blue-light);
+    font-size: 19px;
+    min-height: 35px;
+}
+
+/* =====================================
+   SUSTENTABILIDADE
+===================================== */
+
+.sustainability {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #123b4d, #102d37);
+    border: 1px solid var(--blue-light);
+    border-radius: 18px;
+}
+
+.sustainability h3 {
+    color: #80dfff;
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.sustainability p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+/* =====================================
+   QUIZ
+===================================== */
+
+.quiz-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #174563, #0c2438);
+    border: 2px solid var(--blue-light);
+    border-radius: 18px;
+}
+
+.quiz-progress {
+    width: 100%;
+    height: 10px;
+    background: #31485a;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+#progressBar {
+    width: 20%;
+    height: 100%;
+    background: var(--blue-light);
+    transition: width .4s;
+}
+
+#questionNumber {
+    color: var(--blue-light);
+    margin-bottom: 15px;
+}
+
+#question {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#answers {
+    display: grid;
+    gap: 15px;
+}
+
+#answers button {
+    text-align: left;
+    background: #214d69;
+    font-size: 18px;
+}
+
+#answers button.correct {
+    background: #16804e;
+}
+
+#answers button.wrong {
+    background: #b83245;
+}
+
+#feedback {
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+#result {
+    color: var(--blue-light);
+    font-size: 23px;
+    margin: 25px 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 55px 20px;
+    background: linear-gradient(120deg, #050d15, #123c58, #050d15);
+    border-top: 2px solid var(--blue);
+}
+
+footer p {
+    margin: 8px;
+    font-size: 18px;
+    color: #dcebf4;
+}
+
+.back-top {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--blue-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-top:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        background: #102b40;
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 75vh;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 6vw, 70px);
+    }
+
+    .hero-content p {
+        font-size: 19px;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 19px;
+    }
+
+    .experiment {
+        height: 270px;
+        padding: 7px;
+    }
+
+    .solution {
+        width: 55%;
+    }
+
+    .metal-bar {
+        height: 110px;
+    }
+
+    .formula p {
+        font-size: 28px;
+    }
+
+    .quiz-box {
+        padding: 25px;
+    }
+
+    .chrome-image img {
+        height: 250px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
